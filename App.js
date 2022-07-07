@@ -4,90 +4,83 @@ import { Text, SafeAreaView, ScrollView, View, StyleSheet, Image} from "react-na
 
 export default function App() {
   return (
-    // <SafeAreaView style={styles.container}>
-    //   <ScrollView>
-    //     <View style={styles.photoContainer}>
-    //     <Image source={require("./assets/perry.png")} style={styles.photo} />
-    //   </View>
-    //   <View style={styles.nameContainer}>
-    //     <Text style={styles.nameAndPronouns}>Alexis Rodriguez</Text>
-    //   </View>
-    //   <View style={styles.blurbContainer}>
-    //     <Text style={styles.blurb}>chirp chirp i'm a parakeet</Text>
-    //   </View>
-    //   </ScrollView>
-      
-    // </SafeAreaView>
-
-
     <View style={styles.container}>
       <ScrollView style={styles.scrollViewContainer} contentContainerStyle={{flex: 1, flexDirection: 'column', justifyContent: 'space-evenly'}}>
 
-        {/* Image */}
-        <View style={styles.imageContainer}>
-          <Image source={require("./assets/perry.png")} style={styles.image} />
-        </View>
-
+        {/* Name */}
         <View style={styles.nameTextContainer}>
           <Text style={styles.nameText}>
             Alexis Rodriguez
           </Text>
         </View>
+
+        {/* Image */}
+        <View style={styles.imageContainer}>
+          <Image source={require("./assets/me.jpg")} style={styles.image} />
+        </View>
+
+        {/* Main Description */}
+        <View style={styles.mainDescriptionContainer}>
+          <Text style={styles.mainDescription} >Some description about me...</Text>
+        </View>
        
-
-{/* <View style={styles.photoContainer}>
-     <Image source={require("./assets/perry.png")} style={styles.photo} />
-    //   </View> */}
-
+        {/* Fun Facts */}
+        <View style={styles.funFactsContainer}>
+          <Text style={styles.funFacts} >Some fun facts about me...</Text>
+        </View>
 
       </ScrollView>
     </View>
-
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // flexDirection: 'column',
-    // justifyContent: 'center',
+    flexDirection: 'column',
+    justifyContent: 'center'
   },
   scrollViewContainer: {
     backgroundColor: '#608cc1',
   },
   imageContainer: {
-    flex: 3,
+    flex: 5,
     justifyContent: "center",
     alignItems: "center",
-    padding: 10,
-
+    margin: 50,
   },
   image: {
     resizeMode: "contain",
-    width: "90%",
-    padding: 50,
+    width: "100%",
     borderRadius: 100
   },
   text: {
     fontSize: 42,
   },
   nameTextContainer: {
+    flex: 2,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: '#faebd7'
+  },
+  nameText: {
+    fontSize: 30,
+  },
+  mainDescriptionContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    margin: 0
+    backgroundColor: '#faebd7'
   },
-  nameText: {
-    fontSize: 50,
+  mainDescription: {
+    fontSize: 25,
   },
-  // blurbContainer: {
-  //   flex: 2,
-  //   justifyContent: "center",
-  //   alignItems: "center",
-  // },
-
-
-  // blurb: {
-  //   fontSize: 20,
-  // },
+  funFactsContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  funFacts: {
+    fontSize: 20
+  }
 });
